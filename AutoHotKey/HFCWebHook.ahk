@@ -1,7 +1,7 @@
 /*
 AutoHotkey Version:     1.1.33.09
 Platform:               Win10
-Author:                 JRW254/Sabedth(On Reddit)
+Author:                 JRW254
 Script Version:         1.0
 Script Function:    Get Hideout.co Facebook Code and send via Web Hook
                     Note: Place Discord Web Hook URL ar Line 54 within quotes.
