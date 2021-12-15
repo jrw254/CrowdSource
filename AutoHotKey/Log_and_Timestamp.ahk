@@ -44,7 +44,7 @@ Func_Uptime_Log()
       Return conversion
 	}
 	Else
-		StartTimer := A_TickCount ; Initialize the timer.
+	StartTimer := A_TickCount ; Initialize the timer.
       
 }
 /*
