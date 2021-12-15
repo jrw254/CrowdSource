@@ -36,9 +36,9 @@ Func_Uptime_Log()
 */
 	If (StartTimer != "") ; If not empty
 	{
-		FinishTimer := A_TickCount
-		TimedDuration := FinishTimer - StartTimer
-		StartTimer := ""
+	FinishTimer := A_TickCount
+	TimedDuration := FinishTimer - StartTimer
+	StartTimer := ""
          VarSetCapacity(conversion, 256), DllCall("GetDurationFormat", "uint", 2048, "uint", 0, "ptr", 0, "int64", TimedDuration*10000, "wstr", "d' days 'h':'mm':'ss", "wstr", conversion, "int", 256)
       MsgBox % "Total Uptime was: "conversion . "`nFor: "A_ScriptName . "`nStarted on: "timestamp . "`nEnded on: "endstamp    ; Display via MsgBox when we exit.
       Return conversion
