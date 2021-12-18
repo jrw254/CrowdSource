@@ -2,7 +2,7 @@
 AutoHotkey Version:     1.1.33.09
 Platform:               Win10
 Author:                 JRW254
-Script Version:         1.0
+Script Version:         1.1
 Script Function:    Get Hideout.co Facebook Code and send via Web Hook  
 */
 
