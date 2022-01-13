@@ -22,7 +22,7 @@ console.log(Notification.permission);
 // Now lets set our interval below:
 // PCMP = Prolific Crude Page Monitor for a function name.
 setInterval(PCPM, 300000); // 5 minutes
-//
+// setInterval(PCPM, 30000); // 30 seconds
 function PCPM() { // Function for both sets of notifcations.
 //
 const listItems = document.querySelectorAll(".list-item"); // Display's the info
