@@ -1,4 +1,5 @@
 #Include <TrayIcon-Lib.ahk>
+#Include <LV_Color_Lib.ahk>
 
 ;TrayIcon_GetTrayBar("Shell_TrayWnd") ; Shell_TrayWnd | NotifyIconOverflowWindow |
 
