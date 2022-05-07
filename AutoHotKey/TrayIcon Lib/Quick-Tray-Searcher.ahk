@@ -36,7 +36,6 @@ Menu, Tray, Add, PDF Lookup, PDF
 Menu, Tray, Icon, ISBN Lookup, %A_Windir%\System32\moricons.dll, 91
 Menu, Tray, Icon, PDF Lookup, %A_Windir%\System32\moricons.dll, 91
 spacer()
-;Menu, Tray, NoIcon
 Menu, Tray, Add, Startup Folder, startFold
 Menu, Tray, Add, Version 2 Folder, vtwoFold
 Menu, Tray, Add, Downloads Folder, dwnFold
