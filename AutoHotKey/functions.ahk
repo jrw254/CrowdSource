@@ -25,16 +25,16 @@ CenterWindow(TitleOf, MB) {
     If (MB = 0) 
     {
      WinGetPos, X, Y, Width, Height, % TitleOf
-        IniWrite, %TitleOf%, test.ini, Coords, WinTitle
-        IniWrite, %X%, test.ini, Coords, X_Var
-        IniWrite, %Y%, test.ini, Coords, Y_Var
+        IniWrite, %TitleOf%, centerwindows.ini, Coords, WinTitle
+        IniWrite, %X%, centerwindows.ini, Coords, X_Var
+        IniWrite, %Y%, centerwindows.ini, Coords, Y_Var
     WinMove, % TitleOf,, (A_ScreenWidth/2)-(Width/2), (A_ScreenHeight/2)-(Height/2) ; center window
         WinActivate, % TitleOf
     } 
     else if (MB = 1) 
     {
-    IniRead, Xpar, test.ini, Coords, X_Var 
-    IniRead, Ypar, test.ini, Coords, Y_Var
+    IniRead, Xpar, centerwindows.ini, Coords, X_Var 
+    IniRead, Ypar, centerwindows.ini, Coords, Y_Var
         WinMove, % TitleOf,, Xpar, Ypar ; Moves it back
     }
  Return
