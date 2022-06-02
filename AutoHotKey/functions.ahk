@@ -28,6 +28,8 @@ CenterWindow(TitleOf, MB) {
         IniWrite, %TitleOf%, centerwindows.ini, Coords, WinTitle
         IniWrite, %X%, centerwindows.ini, Coords, X_Var
         IniWrite, %Y%, centerwindows.ini, Coords, Y_Var
+        IniWrite, %Width%, centerwindows.ini, Coords, Width_Var
+        IniWrite, %Height%, centerwindows.ini, Coords, Height_Var
     WinMove, % TitleOf,, (A_ScreenWidth/2)-(Width/2), (A_ScreenHeight/2)-(Height/2) ; center window
         WinActivate, % TitleOf
     } 
@@ -35,7 +37,9 @@ CenterWindow(TitleOf, MB) {
     {
     IniRead, Xpar, centerwindows.ini, Coords, X_Var 
     IniRead, Ypar, centerwindows.ini, Coords, Y_Var
-        WinMove, % TitleOf,, Xpar, Ypar ; Moves it back
+    IniRead, Wpar, centerwindows.ini, Coords, Width_Var
+    IniRead, Hpar, centerwindows.ini, Coords, Height_Var
+        WinMove, % TitleOf,, Xpar, Ypar, Wpar, Hpar ; Moves it back
     }
  Return
     }
