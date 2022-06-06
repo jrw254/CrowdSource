@@ -10,7 +10,7 @@
 /*
     Date:                   June-1-2022
     AutoHotkey Version:     1.1.34.00
-    Platform:               Win10 19042
+    Platform:               Win10 1904
     Author:                 JRW254
     Function Version:       1.0
     Function Description:   Center then move back windows.
@@ -42,4 +42,39 @@ CenterWindow(TitleOf, MB) {
         WinMove, % TitleOf,, Xpar, Ypar, Wpar, Hpar ; Moves it back
     }
  Return
+ }
+ 
+; =========================================================================================================================
+; =========================================================================================================================
+; =========================================================================================================================
+
+/*
+    Date:                   June-5-2022
+    AutoHotkey Version:     1.1.34.00
+    Platform:               Win10 19044
+    Author:                 JRW254
+    Function Version:       1.0
+    Function Description:   Snap to the four quads on a mobile device.
+    Examples:
+        F1:: mobile_snap("File Explorer", -1042, 0, 528, 373, "TLC")
+        F2:: mobile_snap("File Explorer", -520, 0, 528, 373, "TRC")
+        F3:: mobile_snap("File Explorer", -1032, 365, 528, 373, "BLC")
+        F4:: mobile_snap("File Explorer", -520, 365, 528, 373, "BRC")
+*/
+
+mobile_snap(Window, X, Y, W, H, Opt) { 
+    WinGetTitle, Title, % Window
+    Switch Opt
+    {
+        case "TLC": WinMove, % Title,, X, Y, W, H
+        case "TRC": WinMove, % Title,, X, Y, W, H
+        case "BLC": WinMove, % Title,, X, Y, W, H
+        case "BRC": WinMove, % Title,, X, Y, W, H
     }
+Return
+}
+
+; =========================================================================================================================
+; =========================================================================================================================
+; =========================================================================================================================
+    
