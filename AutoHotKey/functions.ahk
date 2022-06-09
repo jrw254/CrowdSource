@@ -130,9 +130,9 @@ Return
 */
 
 quickCMD(commands) {
-Run cmd.exe
-WinWaitActive, cmd.exe,, 1
-SendInput, %commands%{enter}
+	Run cmd.exe
+	WinWaitActive, cmd.exe,, 1
+	SendInput, %commands%{enter}
 return
 }
 
