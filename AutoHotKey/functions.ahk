@@ -77,4 +77,39 @@ Return
 ; =========================================================================================================================
 ; =========================================================================================================================
 ; =========================================================================================================================
-    
+
+/*
+    Date:                   June-8-2022
+    AutoHotkey Version:     1.1.34.00
+    Platform:               Win10 19044
+    Author:                 JRW254
+    Function Version:       1.0
+    Function Description:   Quick TTS Function
+    Examples:
+        talkToMe("Timer Up", 1, 3)
+        talkToMe("Timer Up", 2, -5)
+*/
+
+talkToMe(phrase, voice, speed) {
+    tts := ComObjCreate("SAPI.SpVoice")
+    tts.voice := tts.GetVoices().Item(voice) ; set voice, options might be limted to 0, 1 and 2.
+    tts.rate := speed ; negative slowmode | positive fastmode i.e -10 to 10
+    tts.Speak(phrase) ; Don't forget the quotes
+    return
+}
+/* You might need to Know your available voices. Below will do that for you 
+   Example:
+        allTheVoices()
+*/
+
+allTheVoices() {
+allTheVoices := ComObjCreate("SAPI.SpVoice")
+Loop % allTheVoices.GetVoices.Count
+	OutPut .= allTheVoices.GetVoices.Item(A_Index-1).GetAttribute("Name") "`r`n"
+ToolTip, % SubStr(OutPut, 1, -2)
+Return
+}
+
+; =========================================================================================================================
+; =========================================================================================================================
+; =========================================================================================================================
