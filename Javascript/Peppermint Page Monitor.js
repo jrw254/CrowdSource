@@ -21,7 +21,7 @@ console.log(Notification.permission);
 
 function appenNotification() {
     let taskDESC = document.querySelector(".task_table").querySelectorAll(".expand-description").length; // Grabs it via the Task Description tag
-    const notification = new Notification("Appen Pin's Page Monitor\n Work Available: " + taskDESC, {
+    const notification = new Notification("Appen Peppermint's Page Monitor\n Work Available: " + taskDESC, {
         icon: "https://www.google.com/s2/favicons?domain=https://connect.appen.com/"
     })
  }
